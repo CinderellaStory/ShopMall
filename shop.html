@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>名店</title>
+	<meta name="viewport" content="width=device-width,initial-scale=0.5,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="css/common.css" type="text/css">
+	<link rel="stylesheet" href="css/shop.css" type="text/css">
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_499154_do2bcrl2w0hn0zfr.css" type="text/css">
+	<script type="text/javascript" src="js/viewport.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="shop">
+			<header>
+				<form action="" method="get">
+					<div class="serach">
+						<div class="searchBar">
+							<i class="iconfont icon-sousuo2"></i>
+							<!-- <input type="text" placeholder="请输入商品或店铺名称"> -->
+							<ul>
+								<li>
+									<label>衣服</label>
+									<span>╳</span>
+								</li>
+								<li>
+									<label>裤子</label>
+									<span>╳</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</header>
+			<nav class="white menu">
+					<ul>
+						<li data-level="1" class="fl">
+							<span>店铺等级</span>
+							<i class="iconfont icon-f11-copy"></i>
+							<ul class="test">
+								<li>爱心店铺</li>
+								<li>创业店铺</li>
+								<li>孵化店铺</li>
+								<li>专业店铺</li>
+								<li>旗舰店铺</li>
+								<li>企业店铺</li>
+							</ul>
+						</li>
+						<li data-level="2" class="fr">
+							<span>店铺类别</span>
+							<i class="iconfont icon-f11-copy"></i>
+							<ul class="test">
+								<li>衣服</li>
+								<li>裤子</li>
+								<li>鞋子</li>
+							</ul>
+						</li>
+					</ul>
+			</nav>
+		</div>
+		<div class="hotshop-item">
+		</div>
+	</div>
+	<!-- 尾部导航 -->
+		<footer class="white">
+			<a href="index.html">
+				<i class="iconfont icon-shouye"></i>
+				<p>首页</p>
+			</a>
+			<a href="boutique.html">
+				<i class="iconfont icon-jingpin"></i>
+				<p>精品</p>
+			</a>
+			<a href="shop.html" class="item-active">
+				<i class="iconfont icon-dianming"></i>
+				<p>名店</p>
+			</a>
+			<a href="my.html">
+				<i class="iconfont icon-wode"></i>
+				<p>我的</p>
+			</a>
+		</footer>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		var hotshop = ('<div class="hotshop-list"> <div class="shophot-detail"> <div class="hotshoplogo"> <img src="http://www.ysc66.com/Uploads//goods/2017-09-14/59ba1daf90c7d_600x600.jpg" alt=""> </div> <div class="hotshop-name"> <p class="snames">在水一方服饰</p> <p class="classify"><span>服装</span><em>共102件商品</em></p> </div> <div class="btn fr"><a href="shopindex.html">进入店铺</a></div> </div><div class="list-item"><div class="list"><a href="goods-detail.html"><div class="goods-img"><img src="https://img.alicdn.com/bao/uploaded/i4/1766047907/TB1.Gl5glcHL1JjSZJiXXcKcpXa_!!0-item_pic.jpg_430x430q90.jpg" alt=""></div> <div class="goods-detail"> <div class="ysc">  <div class="goods-name"> <p>秋季新款女装韩版休闲百搭秋季新款女装韩版休闲百搭</p> <div class="goods-price">￥<span>68</span>.00</div> </div> </div></div> </a></div><div class="list"><a href="goods-detail.html"> <div class="goods-img"> <img src="http://www.ysc66.com/Uploads//goods/2017-09-14/59ba1daf90c7d_600x600.jpg" alt=""> </div> <div class="goods-detail"> <div class="ysc"><div class="goods-name"> <p>秋季新款女装韩版休闲百搭秋季新款女装韩版休闲百搭</p> <div class="goods-price">￥<span>68</span>.00</div> </div> </div></div> </div></a></div>');
+		$(".hotshop-item").append(Array(5).fill(hotshop));
+
+		$(".menu ul li").on('click',function(e){
+			// 判断下拉菜单是否隐藏
+			if ($(this).children('ul').is(":hidden")) {
+				$(this).children('ul').fadeIn();
+				$(this).addClass('active');
+				e ? e.stopPropagation() : event.cancelBubble = true;
+			}else
+			{
+				$(this).children('ul').fadeOut();
+				$(this).removeClass('active');
+			}
+		})
+		$(document).click(function() {
+                 $(".test").fadeOut();
+             });
+		$(".menu ul li ul li").on('click',function(){
+			var level = $(this).parents().siblings('span');
+			var grade = $(this).html();
+			level.html(grade);
+		})
+	</script>
+</body>
+</html>

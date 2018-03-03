@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=0.5,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>首页</title>
+	<link rel="stylesheet" href="css/common.css" type="text/css">
+	<link rel="stylesheet" href="css/index.css" type="text/css">
+	<link rel="stylesheet" href="css/img.css" type="text/css">
+	<link rel="stylesheet" href="css/reset.css" type="text/css">
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_499154_iaybw65qtbwng66r.css" type="text/css">
+	<script type="text/javascript" src="js/viewport.js"></script>
+</head>
+<body>
+	<div class="container">
+		<!-- 头部 -->
+		<header>
+			<form action="" method="get">
+				<div class="serach fl">
+					<i class="iconfont icon-sousuo2"></i>
+					<input type="text" placeholder="请输入商品或店铺名称">
+				</div>
+				<div class="sweep fr"><i class="iconfont icon-saoma1"></i></div>
+			</form>
+		</header>
+		<!-- banner -->
+		<div class="banner">
+			<img src="images/2.jpg" alt="">
+		</div>
+		<!-- 类目 -->
+		<div class="category">
+			<ul>
+				<li><div class="item"><img src="images/home/icon_pic01.png" class="icon-pic01"></div><p>服饰箱包</p></li>
+				<li><div class="item"><img src="images/home/icon_pic02.png" class="icon-pic02"></div><p>油品鞋类</p></li>
+				<li><div class="item"><img src="images/home/icon_pic03.png" class="icon-pic03"></div><p>数码家电</p></li>
+				<li><div class="item"><img src="images/home/icon_pic04.png" class="icon-pic04"></div><p>美妆洗护</p></li>
+				<li><div class="item"><img src="images/home/icon_pic05.png" class="icon-pic05"></div><p>珠宝饰品</p></li>
+				<li><div class="item"><img src="images/home/icon_pic06.png" class="icon-pic06"></div><p>运动户外</p></li>
+				<li><div class="item"><img src="images/home/icon_pic07.png" class="icon-pic07"></div><p>百货餐厨</p></li>
+				<li><div class="item"><img src="images/home/icon_pic08.png" class="icon-pic08"></div><p>特产美食</p></li>
+			</ul>
+		</div>
+		<!-- 推荐商品 -->
+		<div class="recommend white">
+			<div class="title">
+				<h1 class="fl reco-text"><span></span>推荐商品</h1>
+				<div class="more fr">更多&gt;</div>
+			</div>
+			<div class="goodslist"></div>
+		</div>
+		<!-- 热门商铺 -->
+		<div class="hot-shop white">
+			<div class="title">
+				<h1 class="fl hot-text"><span></span>推荐商铺</h1>
+				<div class="more fr">更多&gt;</div>
+			</div>
+			<div class="hotshop-item"></div>
+		</div>
+		<!-- 尾部导航 -->
+		<footer class="white">
+			<a href="index.html" class="item-active">
+				<i class="iconfont icon-shouye"></i>
+				<p>首页</p>
+			</a>
+			<a href="boutique.html">
+				<i class="iconfont icon-jingpin"></i>
+				<p>精品</p>
+			</a>
+			<a href="shop.html">
+				<i class="iconfont icon-dianming"></i>
+				<p>名店</p>
+			</a>
+			<a href="my.html">
+				<i class="iconfont icon-wode"></i>
+				<p>我的</p>
+			</a>
+		</footer>
+	</div>
+	<!-- <a href="goods-detail.html" class="list"> 
+			<div class="goods-img"> <img src="http://www.ysc66.com/Uploads//goods/2017-09-14/59ba1daf90c7d_600x600.jpg" alt=""> </div> 
+			<div class="goods-detail"> 
+				<div class="ysc">
+					 <div class="shoplogo"> <img src="http://www.ysc66.com/Uploads//goods/2017-09-14/59ba1daf90c7d_600x600.jpg" alt=""> </div> 
+					 <div class="goods-name">
+						  <p>秋季新款女装韩版休闲百搭秋季新款女装韩版休闲百搭</p> 
+						  <div class="goods-price">￥<span>68</span>.00</div> </div>
+						  <div class="shop-detail overflow"> 
+							  <div class="shop-name fl">盛世鸿祥</div> 
+							  <div class="number fr">10人付款</div> 
+						  </div>
+				</div>
+			</div> 
+		</a> -->
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+		var list = ('<a href="goods-detail.html" class="list"> <div class="goods-img"> <img src="http://www.ysc66.com/Uploads//goods/2017-09-14/59ba1daf90c7d_600x600.jpg" alt=""> </div> <div class="goods-detail"> <div class="ysc"> <div class="shoplogo"> <img src="http://www.ysc66.com/Uploads//goods/2017-09-14/59ba1daf90c7d_600x600.jpg" alt=""> </div> <div class="goods-name"> <p>秋季新款女装韩版休闲百搭秋季新款女装韩版休闲百搭</p> <div class="goods-price">￥<span>68</span>.00</div> </div></div>  <div class="shop-detail overflow"> <div class="shop-name fl">盛世鸿祥</div> <div class="number fr">10人付款</div> </div>  </div> </a>');
+		$(".goodslist").append(Array(4).fill(list));
+		var hotshop = ('<div class="hotshop-list"> <div class="shophot-detail"> <div class="hotshoplogo"> <img src="http://www.ysc66.com/Uploads//goods/2017-09-14/59ba1daf90c7d_600x600.jpg" alt=""> </div> <div class="hotshop-name"> <p class="snames">在水一方服饰</p> <p class="classify"><span>服装</span><em>共102件商品</em></p> </div> <div class="btn fr"><a href="shopindex.html">进入店铺</a></div> </div> <div class="hotshop-goods"> <div class="item"> <div class="goods"> <a href="goods-detail.html"><img src="http://www.ysc66.com/Uploads//goods/2017-09-14/59ba1daf90c7d_600x600.jpg" alt=""></a> <span>¥199.99</span> </div> </div> <div class="item"> <div class="goods"> <a href="goods-detail.html"><img src="http://www.ysc66.com/Uploads//goods/2017-09-14/59ba1daf90c7d_600x600.jpg" alt=""></a> <span>¥199.99</span> </div> </div> <div class="item"> <div class="goods"> <a href="goods-detail.html"><img src="http://www.ysc66.com/Uploads//goods/2017-09-14/59ba1daf90c7d_600x600.jpg" alt=""></a> <span>¥199.99</span> </div> </div> </div> </div>');
+		$(".hotshop-item").append(Array(5).fill(hotshop));
+	</script>
+</body>
+</html> 
